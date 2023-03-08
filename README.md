@@ -1,6 +1,8 @@
 ## Setup for the graphs and prerequisites:
 
-1. [10 minutes] Ensure that the prerequisites are built.
+Known issue: Do not use gcc to compile for now, use Clang. The `round()` function on gcc causes inaccuracies in the JL projections and leading to inaccurate graphs.
+
+1. [10 minutes] Ensure that the prerequisites are built on your local machine.
 
 Install [TexLive/MacTeX](https://tug.org/texlive/)
 
