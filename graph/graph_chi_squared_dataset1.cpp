@@ -41,7 +41,6 @@ void count_dataset(vector<financial_data_entry> &dataset, vector<uint64_t> &coun
 }
 
 void compute_legendre(vector<financial_data_entry> &dataset, vector<uint64_t> &dataset_encoding, jl_info info, vector<double> &projection_vector) {
-	#pragma omp parallel for default(shared)
 	for(int i = 0; i < dataset.size(); i++) {
 		fmpz_t fT;
 		fmpz_init(fT);
