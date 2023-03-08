@@ -58,7 +58,7 @@ int main(int argc, char** argv) {
 
     std::random_device rd;  //Will be used to obtain a seed for the random number engine
     std::mt19937 index_gen(rd());
-	std::uniform_int_distribution<> index_distribution(0, num_records);
+	
 
 	auto total_time_start = clock_start();
 
@@ -80,6 +80,7 @@ int main(int argc, char** argv) {
 	}
 
     num_records = first_dataset.size();
+	std::uniform_int_distribution<> index_distribution(0, num_records);
 
 	// compute the mean
     uint64_t public_inp_sum = 0;

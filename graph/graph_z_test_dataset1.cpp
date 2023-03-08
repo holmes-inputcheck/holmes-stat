@@ -57,7 +57,6 @@ int main(int argc, char** argv) {
 
     std::random_device rd;  //Will be used to obtain a seed for the random number engine
     std::mt19937 index_gen(rd());
-	std::uniform_int_distribution<> index_distribution(0, num_records);
 
 	vector<uint64_t> precomputed_dataset;
 
@@ -77,6 +76,7 @@ int main(int argc, char** argv) {
 	}
 
     num_records = first_dataset.size();
+	std::uniform_int_distribution<> index_distribution(0, num_records);
 
     uint64_t public_inp_sum = 0;
     compute_sum(public_dataset, public_inp_sum);
