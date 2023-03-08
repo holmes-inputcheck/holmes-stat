@@ -190,7 +190,6 @@ uint64_t compute_idx_encoding(vector<int> data, jl_info info) {
 }
 
 void compute_legendre(size_t dataset_size, vector<uint64_t> &dataset_encoding, jl_info info, vector<double> &projection_vector) {
-	#pragma omp parallel for default(shared)
 	for(int i = 0; i < dataset_size; i++) {
 		fmpz_t fT;
 		fmpz_init(fT);
