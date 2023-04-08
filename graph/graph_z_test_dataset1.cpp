@@ -65,7 +65,7 @@ int main(int argc, char** argv) {
 	//auto dataset = create_random_dataset(precomputed_dataset);
 
     auto public_dataset = load_dataset(precomputed_dataset, num_records);
-	auto rng = std::default_random_engine {};
+	auto rng = std::linear_congruential_engine<uint_fast32_t, 48271, 0, 2147483647> {};
 	std::shuffle(std::begin(public_dataset), std::end(public_dataset), rng);
 
     int public_num_records = public_dataset.size();

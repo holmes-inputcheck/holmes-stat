@@ -97,7 +97,7 @@ int main(int argc, char** argv) {
 	auto public_dataset = load_dataset(precomputed_dataset, num_records);
 	const uint64_t QNR = 7;
 
-	auto rng = std::default_random_engine {};
+	auto rng = std::linear_congruential_engine<uint_fast32_t, 48271, 0, 2147483647> {};
 	std::shuffle(std::begin(public_dataset), std::end(public_dataset), rng);
 
 	vector<financial_data_entry> train_dataset;
